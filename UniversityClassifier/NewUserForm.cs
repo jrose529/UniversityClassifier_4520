@@ -24,7 +24,8 @@ namespace UniversityClassifier
                 textBoxNewUserLName.Text == "" || 
                 textBoxNewUserPW.Text == "" ||
                 textBoxNewUserUsername.Text == "" ||
-                textBoxNewUserPWVerify.Text == "")
+                textBoxNewUserPWVerify.Text == "" ||
+                textBoxNewUserEmail.Text == "")
             {
                 MessageBox.Show("ERROR: EMPTY FIELD");
                 return;
@@ -34,7 +35,14 @@ namespace UniversityClassifier
                 MessageBox.Show("ERROR: PASSWORDS DO NOT MATCH");
                 return;
             }
+            userAccount newUser = new userAccount();
+            newUser.createAccount(textBoxNewUserUsername.Text,
+                                  textBoxNewUserFName.Text,
+                                  textBoxNewUserLName.Text,
+                                  textBoxNewUserEmail.Text,
+                                  textBoxNewUserPW.Text);
 
+            
         }
     }
 }

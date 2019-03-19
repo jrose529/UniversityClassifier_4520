@@ -29,9 +29,10 @@ namespace UniversityClassifier
             if (mainUNTextbox.Text=="" || mainPWTextbox.Text == "")
             {
                 MessageBox.Show("ERROR: Empty Field");
+                return;
             }
-
-            return;
+            userAccount userLogin = new userAccount();
+            userLogin.accountLogin(mainUNTextbox.Text, mainPWTextbox.Text);
         }
 
         private void linkLabelMainNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
