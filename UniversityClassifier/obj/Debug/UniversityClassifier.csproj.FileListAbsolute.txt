@@ -9,3 +9,4 @@ C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\Unive
 C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.exe
 C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.pdb
 C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.NewUserForm.resources
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.academicInfo.resources

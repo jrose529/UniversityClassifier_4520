@@ -39,6 +39,7 @@ namespace UniversityClassifier
         {
             NewUserForm newForm = new NewUserForm();
             newForm.Show();
+            
         }
     }
 }
