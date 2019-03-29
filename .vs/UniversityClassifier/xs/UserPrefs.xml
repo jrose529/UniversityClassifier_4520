@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{82D695B3-3962-431B-A83B-78BFC01B7BC6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UniversityClassifier/userAccount.cs">
+    <Files>
+      <File FileName="UniversityClassifier/NewUserForm.cs" Line="15" Column="29" />
+      <File FileName="UniversityClassifier/academicInfo.cs" Line="1" Column="1" />
+      <File FileName="UniversityClassifier/App.config" Line="1" Column="1" />
+      <File FileName="UniversityClassifier/Program.cs" Line="18" Column="34" />
+      <File FileName="UniversityClassifier/UCMain.cs" Line="46" Column="1" />
+      <File FileName="UniversityClassifier/userAccount.cs" Line="43" Column="45" />
+      <File FileName="UniversityClassifier/Helper.cs" Line="14" Column="40" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.UniversityClassifier PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

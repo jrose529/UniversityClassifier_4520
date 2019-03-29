@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Data;
+using System.Data; 
 
 namespace UniversityClassifier
 {
@@ -69,6 +69,7 @@ namespace UniversityClassifier
             MessageBox.Show("connection possibly works");*/
             try
             {
+
                 string sqlString = "Server=software-engineering.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=software_engineering;UID=mdalonzo;password=masterpassword";
                 string sqlString_ = "Server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=uniclassifier;UID=masterusername;Password=masterpassword";
                 string sqlString__ = "Data Source=software-engineering.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;Network Library = DBMSSOCN; Initial Catalog=software_engineering; User ID = mdalonzo; Password = masterpassword";
@@ -80,6 +81,14 @@ namespace UniversityClassifier
                 //"and password=password";
 
                 SqlConnection connection = new SqlConnection(sqlString__);
+
+
+                //database name, what table for sqlString + query
+                string sqlString = "server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=tempdb;UID=masterusername;password=masterpassword";
+                string query = "select * from university";
+                SqlConnection connection = new SqlConnection(sqlString);
+                SqlCommand sqlCmd = new SqlCommand(query);
+
                 connection.Open();
                 SqlCommand sqlCmd = new SqlCommand(query);
                 DataSet dataSet = new DataSet();
