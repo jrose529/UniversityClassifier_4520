@@ -179,7 +179,7 @@
             this.Controls.Add(this.textBoxNewUserPW);
             this.Controls.Add(this.textBoxNewUserLName);
             this.Name = "NewUserForm";
-            this.Text = "NewUserForm";
+            this.Text = "Create New Account";
             this.ResumeLayout(false);
             this.PerformLayout();
 

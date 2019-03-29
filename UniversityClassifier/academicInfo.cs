@@ -16,5 +16,15 @@ namespace UniversityClassifier
         {
             InitializeComponent();
         }
+
+        private void btnAICancel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAISubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

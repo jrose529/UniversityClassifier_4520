@@ -25,7 +25,29 @@ namespace UniversityClassifier
             emailAddr = emailaddr;
             password = pw;
 
-            //open sql connection, insert these credentials into database
+
+            string sqlString = "server=software-engineering.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=software_engineering;UID=mdalonzo;password=masterpassword";
+
+            using (SqlConnection connection = new SqlConnection(sqlString))
+            {
+                string query = "insert into user (username,password,first_name,last_name) values (@username,@password,@firstname,@lastname)";
+                using (SqlCommand insertCmd = new SqlCommand(query, connection))
+                {
+                    insertCmd.Parameters.AddWithValue("@username", username);
+                    insertCmd.Parameters.AddWithValue("@password", password);
+                    insertCmd.Parameters.AddWithValue("@firstName", firstName);
+                    insertCmd.Parameters.AddWithValue("@lastName", lastName);
+
+                
+                    connection.Open();
+
+                    int affectedRows = insertCmd.ExecuteNonQuery();
+
+                    connection.Close();
+
+                    MessageBox.Show(affectedRows + " rows inserted!");
+                }
+            }
         }
 
         public void accountLogin(string username, string pw)
@@ -33,14 +55,33 @@ namespace UniversityClassifier
             userName = username;
             password = pw;
 
+            /*SqlConnection conn = new SqlConnection();
+            conn.ConnectionString =
+            "Data Source=software-engineering.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;" +
+            "Initial Catalog=software_engineering;" +
+            "User id=mdalonzo;" +
+            "Password=masterpassword;";
+            conn.Open();
+            string query = "select * from university";
+            SqlCommand sqlCmd = new SqlCommand(query);
+            DataSet dataSet = new DataSet();
+            conn.Close();
+            MessageBox.Show("connection possibly works");*/
             try
             {
-                //database name, what table for sqlString + query
-                string sqlString = "server=universitydatabase.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=universitydatabase;UID=mdalonzo;password=masterpassword";
-                string query = "select * from university";
-                SqlConnection connection = new SqlConnection(sqlString);
-                SqlCommand sqlCmd = new SqlCommand(query);
+                string sqlString = "Server=software-engineering.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=software_engineering;UID=mdalonzo;password=masterpassword";
+                string sqlString_ = "Server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=uniclassifier;UID=masterusername;Password=masterpassword";
+                string sqlString__ = "Data Source=software-engineering.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;Network Library = DBMSSOCN; Initial Catalog=software_engineering; User ID = mdalonzo; Password = masterpassword";
+                string query = "select username,password from user where username=userName and password=password";
+
+                //string query = "select username, password " +
+                //"from user " +
+                //"where username=userName " +
+                //"and password=password";
+
+                SqlConnection connection = new SqlConnection(sqlString__);
                 connection.Open();
+                SqlCommand sqlCmd = new SqlCommand(query);
                 DataSet dataSet = new DataSet();
                 connection.Close();
                 MessageBox.Show("connection possibly works");
@@ -50,7 +91,6 @@ namespace UniversityClassifier
             {
                 MessageBox.Show("Exception " + ex);
             }
-            //open sql connection, verify these credentials. Use seperate sql class to open connection?
         }
     }
 }
