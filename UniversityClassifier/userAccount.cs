@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Data;
+using System.Data; 
 
 namespace UniversityClassifier
 {
@@ -35,8 +35,9 @@ namespace UniversityClassifier
 
             try
             {
+
                 //database name, what table for sqlString + query
-                string sqlString = "server=universitydatabase.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=universitydatabase;UID=mdalonzo;password=masterpassword";
+                string sqlString = "server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=tempdb;UID=masterusername;password=masterpassword";
                 string query = "select * from university";
                 SqlConnection connection = new SqlConnection(sqlString);
                 SqlCommand sqlCmd = new SqlCommand(query);
