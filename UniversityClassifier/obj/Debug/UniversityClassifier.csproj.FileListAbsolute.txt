@@ -1,15 +1,4 @@
 C:/Users/jensen/AppData/Local/Temporary Projects/UniversityClassifier/bin/Debug/UniversityClassifier.exe.config
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/bin/Debug/UniversityClassifier.exe.config
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/bin/Debug/UniversityClassifier.exe
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/bin/Debug/UniversityClassifier.pdb
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/obj/Debug/UniversityClassifier.csprojResolveAssemblyReference.cache
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/obj/Debug/UniversityClassifier.UCMain.resources
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/obj/Debug/UniversityClassifier.Properties.Resources.resources
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/obj/Debug/UniversityClassifier.csproj.GenerateResource.Cache
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/obj/Debug/UniversityClassifier.exe
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/obj/Debug/UniversityClassifier.pdb
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/obj/Debug/UniversityClassifier.NewUserForm.resources
-C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/UniversityClassifier/obj/Debug/UniversityClassifier.academicInfo.resources
 /home/marissa/SoftwareEngineering/UniversityClassifier_4520/UniversityClassifier/bin/Debug/UniversityClassifier.exe.config
 /home/marissa/SoftwareEngineering/UniversityClassifier_4520/UniversityClassifier/bin/Debug/UniversityClassifier.exe
 /home/marissa/SoftwareEngineering/UniversityClassifier_4520/UniversityClassifier/bin/Debug/UniversityClassifier.pdb
@@ -22,3 +11,14 @@ C:/Users/jensen/Documents/Visual Studio 2015/Projects/UniversityClassifier/Unive
 /home/marissa/SoftwareEngineering/UniversityClassifier_4520/UniversityClassifier/obj/Debug/UniversityClassifier.csproj.CoreCompileInputs.cache
 /home/marissa/SoftwareEngineering/UniversityClassifier_4520/UniversityClassifier/obj/Debug/UniversityClassifier.exe
 /home/marissa/SoftwareEngineering/UniversityClassifier_4520/UniversityClassifier/obj/Debug/UniversityClassifier.pdb
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\bin\Debug\UniversityClassifier.exe.config
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.exe
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.pdb
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\bin\Debug\UniversityClassifier.exe
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.academicInfo.resources
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.NewUserForm.resources
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.UCMain.resources
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.Properties.Resources.resources
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.csproj.GenerateResource.Cache
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\bin\Debug\UniversityClassifier.pdb
+C:\Users\jensen\Documents\Visual Studio 2015\Projects\UniversityClassifier\UniversityClassifier\obj\Debug\UniversityClassifier.csprojResolveAssemblyReference.cache

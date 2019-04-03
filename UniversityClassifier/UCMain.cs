@@ -16,8 +16,8 @@ namespace UniversityClassifier
         {
             this.BackgroundImage = Properties.Resources.classifierBackground;
             InitializeComponent();
+            tabControl1.Hide();
         }
-        //Have small main page, then open up other larger pages? Because I'd have to individually hide, show parts of the app
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -32,14 +32,89 @@ namespace UniversityClassifier
                 return;
             }
             userAccount userLogin = new userAccount();
-            userLogin.accountLogin(mainUNTextbox.Text, mainPWTextbox.Text);
+            int loginCheck = userLogin.accountLogin(mainUNTextbox.Text, mainPWTextbox.Text);
+
+            switch (loginCheck)
+            {
+                case 0:
+                    MessageBox.Show("ERROR: Incorrect Login");
+                    mainUNTextbox.Clear();
+                    mainPWTextbox.Clear();
+                    break;
+                case 1:
+                    //academicInfo academicInfo = new academicInfo();
+                    //academicInfo.Show();
+                    tabControl1.Show();
+                    tabControl1.SelectedTab = tabPage2;
+                    break;
+                case 2:
+                    MessageBox.Show("ERROR: Multiple accounts with the same username detected");
+                    break;
+                default:
+                    MessageBox.Show("ERROR: UNHANDLED EXCEPTION");
+                    break;
+            }
         }
 
         private void linkLabelMainNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NewUserForm newForm = new NewUserForm();
             newForm.Show();
-            
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPage3)
+            {
+                tabControl1.Hide();
+                mainUNTextbox.Clear();
+                mainPWTextbox.Clear();
+            }
+        }
+
+        private void btnUMainAICancel_Click(object sender, EventArgs e)
+        {
+            textBoxUMainGPA.Clear();
+            textBoxUMainGRE.Clear();
+            textBoxUMainTOEFL.Clear();
+            textBoxUMainSoP.Clear();
+            textBoxUMainLoR.Clear();
+        }
+
+        private void btnUMainAISubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateProfile_Click(object sender, EventArgs e)
+        {
+            if (textBoxUpdateUserPW.Text == "" &&
+                textBoxUpdateUserPWVerify.Text == "" &&
+                textBoxUpdateUserEmail.Text == "")
+            {
+                MessageBox.Show("ERROR: ALL FIELDS EMPTY");
+                return;
+            }
+
+            if (textBoxUpdateUserPW.Text.Equals(textBoxUpdateUserPWVerify.Text) == false)
+            {
+                MessageBox.Show("ERROR: PASSWORDS DO NOT MATCH");
+                return;
+            }
+
+            userAccount update = new userAccount();
+            update.updateAccount(textBoxUpdateUserEmail.Text,
+                                 textBoxUpdateUserPW.Text);
+
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void btnUpdateProfileCancel_Click(object sender, EventArgs e)
+        {
+            textBoxUpdateUserEmail.Clear();
+            textBoxUpdateUserPW.Clear();
+            textBoxUpdateUserPWVerify.Clear();
+            tabControl1.SelectedTab = tabPage2;
         }
     }
 }

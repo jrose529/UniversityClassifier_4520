@@ -42,7 +42,7 @@ namespace UniversityClassifier
                                   textBoxNewUserEmail.Text,
                                   textBoxNewUserPW.Text);
 
-            
+            this.Close();
         }
     }
 }
