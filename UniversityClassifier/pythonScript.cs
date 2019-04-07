@@ -16,7 +16,8 @@ namespace UniversityClassifier
     {
         public string[,] runScript(uniQuery[] userAD, string[,] schoolInfo)
         {
-            string[,] report = new string[20, 2];
+            //string[,] report = new string[20, 2];
+            string report;
 
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"pythonAlgo.txt");
@@ -28,7 +29,7 @@ namespace UniversityClassifier
             {
                 using (StreamReader reader = process.StandardOutput)
                 {
-                    //report = reader.ReadToEnd();
+                    report = reader.ReadToEnd();
                 }
             }
             return null;

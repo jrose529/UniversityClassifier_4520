@@ -36,11 +36,11 @@ def graduate_algorithm(GRE,TOEFL,SOP,LOR,CGPA,research,school_info):
 
 	#generate output array
 	for i in range(schools):
-		output.append([school_info[i][0],admission_chances[i]])
+		output.append([school_info[i][0],admission_chances[i],school_info[i][2]])
 		
 	
 	#take top 20
 	for x in range(20):
-		for y in range(2)
+		for y in range(3)
 		percentAdmin[x][y] = output[x][y]
 	return percentAdmin

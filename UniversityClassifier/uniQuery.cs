@@ -13,15 +13,16 @@ namespace UniversityClassifier
     class uniQuery : UCMain
     {
         public static string sqlString = "server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=tempdb;UID=masterusername;password=masterpassword";
-        public int GRE { get; set; }
-        public int TOEFL { get; set; }
-        public float SoP { get; set; }
-        public float LoR { get; set; }
-        public float GPA { get; set; }
+        public double GRE { get; set; }
+        public double TOEFL { get; set; }
+        public double SoP { get; set; }
+        public double LoR { get; set; }
+        public double GPA { get; set; }
         public int Research { get; set; }
 
         public string schoolName { get; set; }
         public int avgRanking { get; set; }
+        public int schoolID { get; set; }
 
         public int getCurrentAcctIndex(string currentAcct)
         {
@@ -88,7 +89,7 @@ namespace UniversityClassifier
 
                     using (SqlDataReader reader = uniCmd.ExecuteReader())
                     {
-                        if (reader == null)
+                        if (!reader.HasRows)
                         {
                             MessageBox.Show("ERROR: Invalid School Name");
                             return;
@@ -99,18 +100,15 @@ namespace UniversityClassifier
                         {
                             listAD.Add(new uniQuery
                             {
-                                GRE = reader.GetInt32(0),
-                                TOEFL = reader.GetInt32(1),
-                                SoP = reader.GetFloat(2),
-                                LoR = reader.GetFloat(3),
-                                GPA = reader.GetFloat(4)
+                                GRE = reader.GetDouble(0),
+                                TOEFL = reader.GetDouble(1),
+                                SoP = reader.GetDouble(2),
+                                LoR = reader.GetDouble(3),
+                                GPA = reader.GetDouble(4)
                             });
 
                         }
                         schoolAD = listAD.ToArray();
-
-                        //have two sets, one for student info, one for uni info. Have em side by side
-                        //copy dataset into student array?
                     }
                 }
 
@@ -123,9 +121,9 @@ namespace UniversityClassifier
 
                     using (SqlDataReader reader = userADCmd.ExecuteReader())
                     {
-                        if (reader == null)
+                        if (!reader.HasRows)
                         {
-                            MessageBox.Show("ERROR: Invalid User");
+                            MessageBox.Show("ERROR: User Has No Stats");
                             return;
                         }
 
@@ -134,38 +132,38 @@ namespace UniversityClassifier
                         {
                             listUserAD.Add(new uniQuery
                             {
-                                GRE = reader.GetInt32(0),
-                                TOEFL = reader.GetInt32(1),
-                                SoP = reader.GetFloat(2),
-                                LoR = reader.GetFloat(3),
-                                GPA = reader.GetFloat(4)
+                                GRE = (double)reader.GetInt64(0),
+                                TOEFL = (double)reader.GetInt64(1),
+                                SoP = reader.GetDouble(2),
+                                LoR = reader.GetDouble(3),
+                                GPA = reader.GetDouble(4)
                             });
-
                         }
+
                         userAD = listUserAD.ToArray();
-
-                        dgvUniStats.Rows[0].Cells[1].Value = schoolAD[0];
-                        dgvUniStats.Rows[0].Cells[2].Value = userAD[0];
-                        dgvUniStats.Rows[1].Cells[1].Value = schoolAD[1];
-                        dgvUniStats.Rows[1].Cells[2].Value = userAD[1];
-                        dgvUniStats.Rows[2].Cells[1].Value = schoolAD[2];
-                        dgvUniStats.Rows[2].Cells[2].Value = userAD[2];
-                        dgvUniStats.Rows[3].Cells[1].Value = schoolAD[3];
-                        dgvUniStats.Rows[3].Cells[2].Value = userAD[3];
-                        dgvUniStats.Rows[4].Cells[1].Value = schoolAD[4];
-                        dgvUniStats.Rows[4].Cells[2].Value = schoolAD[4];
-
-                        dgvUniStats.Show();
                     }
                 }
             }
+
+            dgvUniStats.Rows[0].Cells[1].Value = schoolAD[0].GRE;
+            dgvUniStats.Rows[0].Cells[2].Value = userAD[0].GRE;
+            dgvUniStats.Rows[1].Cells[1].Value = schoolAD[0].TOEFL;
+            dgvUniStats.Rows[1].Cells[2].Value = userAD[0].TOEFL;
+            dgvUniStats.Rows[2].Cells[1].Value = schoolAD[0].GPA;
+            dgvUniStats.Rows[2].Cells[2].Value = userAD[0].GPA;
+            dgvUniStats.Rows[3].Cells[1].Value = schoolAD[0].SoP;
+            dgvUniStats.Rows[3].Cells[2].Value = userAD[0].SoP;
+            dgvUniStats.Rows[4].Cells[1].Value = schoolAD[0].LoR;
+            dgvUniStats.Rows[4].Cells[2].Value = userAD[0].LoR;
+
+            //dgvUniStats.Show();
         }
 
         public void generateReport(string currentAcct)
         { 
             int studentIndex;
             uniQuery[] userAD = null;
-            string[,] schoolInfo = new string[1277, 2];
+            string[,] schoolInfo = new string[1277, 3];
             string[,] report = new string[20, 2];
 
             using (SqlConnection connection = new SqlConnection(sqlString))
@@ -197,7 +195,7 @@ namespace UniversityClassifier
                     }
                 }
 
-                query = "select school,average from university";
+                query = "select school,average,index from university";
 
                 using (SqlCommand getSchoolInfoCmd = new SqlCommand(query, connection))
                 {
@@ -207,7 +205,7 @@ namespace UniversityClassifier
                         while (reader.Read())
                         {
                             listSchoolInfo.Add(new uniQuery
-                            { schoolName = reader.GetString(0), avgRanking = reader.GetInt32(1) });
+                            { schoolName = reader.GetString(0), avgRanking = reader.GetInt32(1), schoolID = reader.GetInt32(2) });
 
                         }
 
@@ -216,6 +214,7 @@ namespace UniversityClassifier
                         {
                             schoolInfo[count,0] = listObj.schoolName;
                             schoolInfo[count,1] = Convert.ToString(listObj.avgRanking);
+                            schoolInfo[count, 2] = Convert.ToString(listObj.schoolID);
                             count++;  
                         }
 

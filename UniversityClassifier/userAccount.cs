@@ -30,8 +30,6 @@ namespace UniversityClassifier
                     insertCmd.Parameters.AddWithValue("@emailAddress", emailaddr);
                     
                     insertCmd.ExecuteNonQuery();
-
-                    connection.Close();
                 }
             }
         }

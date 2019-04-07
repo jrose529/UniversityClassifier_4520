@@ -19,12 +19,13 @@ namespace UniversityClassifier
             this.BackgroundImage = Properties.Resources.classifierBackground;
             InitializeComponent();
             tabControl1.Hide();
-            dgvUniStats.Rows[0].Cells[0].Value = "GRE Score";
-            dgvUniStats.Rows[1].Cells[0].Value = "TOEFL Score";
-            dgvUniStats.Rows[2].Cells[0].Value = "GPA";
-            dgvUniStats.Rows[3].Cells[0].Value = "Statement of Purpose";
-            dgvUniStats.Rows[4].Cells[0].Value = "Letters of Rec";
-            dgvUniStats.Hide();
+            //dgvUniStats.Rows[0].Cells[0].Value = "GRE Score";
+            dgvUniStats.Rows.Add("GRE Score");
+            dgvUniStats.Rows.Add("TOEFL Score");
+            dgvUniStats.Rows.Add("GPA");
+            dgvUniStats.Rows.Add("Statement of Purpose");
+            dgvUniStats.Rows.Add("Letters of Rec");
+            //dgvUniStats.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace UniversityClassifier
                     tabControl1.Show();
                     tabControl1.SelectedTab = tabPage2;
                     textBoxUniversitySearcher.Show();
-                    btnUniversitySearcher.Hide();
+                    btnUniversitySearcher.Show();
                     break;
                 case 2:
                     MessageBox.Show("ERROR: Multiple accounts with the same username detected");
@@ -102,6 +103,36 @@ namespace UniversityClassifier
 
         private void btnUMainAISubmit_Click(object sender, EventArgs e)
         {
+            if (Int32.Parse(textBoxUMainGRE.Text) < 34 || Int32.Parse(textBoxUMainGRE.Text) > 260)
+            {
+                MessageBox.Show("ERROR: Outside of range 34-260");
+                return;
+            }
+
+            if (Int32.Parse(textBoxUMainLoR.Text) < 0 || Int32.Parse(textBoxUMainLoR.Text) > 5)
+            {
+                MessageBox.Show("ERROR: Outside of range 0-5");
+                return;
+            }
+
+            if (Int32.Parse(textBoxUMainGPA.Text) < 0 || Int32.Parse(textBoxUMainGPA.Text) > 10)
+            {
+                MessageBox.Show("ERROR: Outside of range 0-10");
+                return;
+            }
+
+            if (Int32.Parse(textBoxUMainSoP.Text) < 0 || Int32.Parse(textBoxUMainSoP.Text) > 5)
+            {
+                MessageBox.Show("ERROR: Outside of range 0-5");
+                return;
+            }
+
+            if (Int32.Parse(textBoxUMainTOEFL.Text) < 0 || Int32.Parse(textBoxUMainTOEFL.Text) > 120)
+            {
+                MessageBox.Show("ERROR: Outside of range 0-120");
+                return;
+            }
+
             bool research = false;
             if (radioButtonAIYes.Checked == true)
             {
@@ -159,48 +190,6 @@ namespace UniversityClassifier
         {
             uniQuery newQuery = new uniQuery();
             newQuery.universityQuery(username_current, textBoxUniversitySearcher.Text);
-        }
-
-
-        //Leave academic info events
-        private void textBoxUMainGRE_Leave(object sender, EventArgs e)
-        {
-            if (Int32.Parse(textBoxUMainGRE.Text) < 34 || Int32.Parse(textBoxUMainGRE.Text) > 260)
-            {
-                MessageBox.Show("ERROR: Outside of range 34-260");
-            }
-        }
-
-        private void textBoxUMainLoR_Leave(object sender, EventArgs e)
-        {
-            if (Int32.Parse(textBoxUMainLoR.Text) < 0 || Int32.Parse(textBoxUMainLoR.Text) > 5)
-            {
-                MessageBox.Show("ERROR: Outside of range 0-5");
-            }
-        }
-
-        private void textBoxUMainGPA_Leave(object sender, EventArgs e)
-        {
-            if (Int32.Parse(textBoxUMainGPA.Text) < 0 || Int32.Parse(textBoxUMainGPA.Text) > 10)
-            {
-                MessageBox.Show("ERROR: Outside of range 0-10");
-            }
-        }
-
-        private void textBoxUMainSoP_Leave(object sender, EventArgs e)
-        {
-            if (Int32.Parse(textBoxUMainSoP.Text) < 0 || Int32.Parse(textBoxUMainSoP.Text) > 5)
-            {
-                MessageBox.Show("ERROR: Outside of range 0-5");
-            }
-        }
-
-        private void textBoxUMainTOEFL_Leave(object sender, EventArgs e)
-        {
-            if (Int32.Parse(textBoxUMainTOEFL.Text) < 0 || Int32.Parse(textBoxUMainTOEFL.Text) > 120)
-            {
-                MessageBox.Show("ERROR: Outside of range 0-120");
-            }
         }
     }
 }

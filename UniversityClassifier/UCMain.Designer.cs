@@ -321,7 +321,6 @@
             this.textBoxUMainTOEFL.Name = "textBoxUMainTOEFL";
             this.textBoxUMainTOEFL.Size = new System.Drawing.Size(150, 26);
             this.textBoxUMainTOEFL.TabIndex = 47;
-            this.textBoxUMainTOEFL.Leave += new System.EventHandler(this.textBoxUMainTOEFL_Leave);
             // 
             // label6
             // 
@@ -338,7 +337,6 @@
             this.textBoxUMainSoP.Name = "textBoxUMainSoP";
             this.textBoxUMainSoP.Size = new System.Drawing.Size(150, 26);
             this.textBoxUMainSoP.TabIndex = 45;
-            this.textBoxUMainSoP.Leave += new System.EventHandler(this.textBoxUMainSoP_Leave);
             // 
             // label4
             // 
@@ -364,7 +362,6 @@
             this.textBoxUMainGPA.Name = "textBoxUMainGPA";
             this.textBoxUMainGPA.Size = new System.Drawing.Size(150, 26);
             this.textBoxUMainGPA.TabIndex = 42;
-            this.textBoxUMainGPA.Leave += new System.EventHandler(this.textBoxUMainGPA_Leave);
             // 
             // label5
             // 
@@ -390,7 +387,6 @@
             this.textBoxUMainLoR.Name = "textBoxUMainLoR";
             this.textBoxUMainLoR.Size = new System.Drawing.Size(138, 26);
             this.textBoxUMainLoR.TabIndex = 39;
-            this.textBoxUMainLoR.Leave += new System.EventHandler(this.textBoxUMainLoR_Leave);
             // 
             // textBoxUMainGRE
             // 
@@ -398,7 +394,6 @@
             this.textBoxUMainGRE.Name = "textBoxUMainGRE";
             this.textBoxUMainGRE.Size = new System.Drawing.Size(150, 26);
             this.textBoxUMainGRE.TabIndex = 38;
-            this.textBoxUMainGRE.Leave += new System.EventHandler(this.textBoxUMainGRE_Leave);
             // 
             // tabPage4
             // 
