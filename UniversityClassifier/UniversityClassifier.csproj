@@ -58,6 +58,7 @@
     <Compile Include="NewUserForm.Designer.cs">
       <DependentUpon>NewUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="pythonScript.cs" />
     <Compile Include="UCMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uniQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="userAccount.cs" />
     <EmbeddedResource Include="academicInfo.resx">
       <DependentUpon>academicInfo.cs</DependentUpon>

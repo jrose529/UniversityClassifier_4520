@@ -11,12 +11,10 @@ namespace UniversityClassifier
 {
     class userAccount
     {
-        public static string userName_current; 
+        public static string sqlString = "server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=tempdb;UID=masterusername;password=masterpassword";
 
         public void createAccount(string username, string fname, string lname, string emailaddr, string pw)
         {
-            string sqlString = "server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=tempdb;UID=masterusername;password=masterpassword";
-
             using (SqlConnection connection = new SqlConnection(sqlString))
             {
                 string query = "insert into student (username,password,first_name,last_name,email) values (@username,@password,@firstname,@lastname,@emailAddress)";
@@ -39,14 +37,10 @@ namespace UniversityClassifier
         }
 
         public int accountLogin(string username, string pw)
-        {
-            userName_current = username;
-
-            try
-            {               
-                string sqlString = "server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=tempdb;UID=masterusername;password=masterpassword";
+        {                 
+            using (SqlConnection connection = new SqlConnection(sqlString))
+            { 
                 string query = "select username, password from [student] where username=@userName and password=@password";
-                SqlConnection connection = new SqlConnection(sqlString);
 
                 connection.Open();
 
@@ -72,14 +66,9 @@ namespace UniversityClassifier
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exception " + ex);
-            }
-            return 0;
         }
 
-        public void updateAccount(string emailaddr, string pw)
+        public void updateAccount(string emailaddr, string pw, string currentAcct)
         {
             string queryBuilder = "";
 
@@ -97,12 +86,10 @@ namespace UniversityClassifier
                 queryBuilder += "email = @emailAddress";
             }
 
-            string sqlString = "server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=tempdb;UID=masterusername;password=masterpassword";
-
             using (SqlConnection connection = new SqlConnection(sqlString))
             {
                 string query = "update student set " + queryBuilder + " where username = @username";
-                Console.WriteLine(userName_current);
+                
                 connection.Open();
 
                 using (SqlCommand updateCmd = new SqlCommand(query, connection))
@@ -116,7 +103,8 @@ namespace UniversityClassifier
                     {
                         updateCmd.Parameters.AddWithValue("@emailAddress", emailaddr);
                     }
-                    updateCmd.Parameters.AddWithValue("@username", userName_current);
+
+                    updateCmd.Parameters.AddWithValue("@username", currentAcct);
 
                     updateCmd.ExecuteNonQuery();
 

@@ -61,10 +61,20 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxUMainLoR = new System.Windows.Forms.TextBox();
             this.textBoxUMainGRE = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dgvUniStats = new System.Windows.Forms.DataGridView();
+            this.btnUniversitySearcher = new System.Windows.Forms.Button();
+            this.textBoxUniversitySearcher = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUniStats)).BeginInit();
             this.SuspendLayout();
             // 
             // mainUNTextbox
@@ -124,6 +134,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(197, 66);
             this.tabControl1.Name = "tabControl1";
@@ -310,6 +321,7 @@
             this.textBoxUMainTOEFL.Name = "textBoxUMainTOEFL";
             this.textBoxUMainTOEFL.Size = new System.Drawing.Size(150, 26);
             this.textBoxUMainTOEFL.TabIndex = 47;
+            this.textBoxUMainTOEFL.Leave += new System.EventHandler(this.textBoxUMainTOEFL_Leave);
             // 
             // label6
             // 
@@ -326,6 +338,7 @@
             this.textBoxUMainSoP.Name = "textBoxUMainSoP";
             this.textBoxUMainSoP.Size = new System.Drawing.Size(150, 26);
             this.textBoxUMainSoP.TabIndex = 45;
+            this.textBoxUMainSoP.Leave += new System.EventHandler(this.textBoxUMainSoP_Leave);
             // 
             // label4
             // 
@@ -351,6 +364,7 @@
             this.textBoxUMainGPA.Name = "textBoxUMainGPA";
             this.textBoxUMainGPA.Size = new System.Drawing.Size(150, 26);
             this.textBoxUMainGPA.TabIndex = 42;
+            this.textBoxUMainGPA.Leave += new System.EventHandler(this.textBoxUMainGPA_Leave);
             // 
             // label5
             // 
@@ -376,6 +390,7 @@
             this.textBoxUMainLoR.Name = "textBoxUMainLoR";
             this.textBoxUMainLoR.Size = new System.Drawing.Size(138, 26);
             this.textBoxUMainLoR.TabIndex = 39;
+            this.textBoxUMainLoR.Leave += new System.EventHandler(this.textBoxUMainLoR_Leave);
             // 
             // textBoxUMainGRE
             // 
@@ -383,16 +398,91 @@
             this.textBoxUMainGRE.Name = "textBoxUMainGRE";
             this.textBoxUMainGRE.Size = new System.Drawing.Size(150, 26);
             this.textBoxUMainGRE.TabIndex = 38;
+            this.textBoxUMainGRE.Leave += new System.EventHandler(this.textBoxUMainGRE_Leave);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dgvUniStats);
+            this.tabPage4.Controls.Add(this.btnUniversitySearcher);
+            this.tabPage4.Controls.Add(this.textBoxUniversitySearcher);
+            this.tabPage4.Controls.Add(this.label12);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(689, 442);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "University Stats";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dgvUniStats
+            // 
+            this.dgvUniStats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUniStats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvUniStats.Location = new System.Drawing.Point(62, 164);
+            this.dgvUniStats.Name = "dgvUniStats";
+            this.dgvUniStats.RowTemplate.Height = 28;
+            this.dgvUniStats.Size = new System.Drawing.Size(569, 149);
+            this.dgvUniStats.TabIndex = 37;
+            // 
+            // btnUniversitySearcher
+            // 
+            this.btnUniversitySearcher.Location = new System.Drawing.Point(24, 27);
+            this.btnUniversitySearcher.Name = "btnUniversitySearcher";
+            this.btnUniversitySearcher.Size = new System.Drawing.Size(95, 33);
+            this.btnUniversitySearcher.TabIndex = 36;
+            this.btnUniversitySearcher.Text = "Search";
+            this.btnUniversitySearcher.UseVisualStyleBackColor = true;
+            this.btnUniversitySearcher.Click += new System.EventHandler(this.btnUniversitySearcher_Click);
+            // 
+            // textBoxUniversitySearcher
+            // 
+            this.textBoxUniversitySearcher.Location = new System.Drawing.Point(137, 30);
+            this.textBoxUniversitySearcher.Name = "textBoxUniversitySearcher";
+            this.textBoxUniversitySearcher.Size = new System.Drawing.Size(199, 26);
+            this.textBoxUniversitySearcher.TabIndex = 8;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(133, 250);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(401, 20);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "To display university stats, you must search for a school.";
             // 
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(789, 473);
+            this.tabPage3.Size = new System.Drawing.Size(689, 442);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Log Out";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Category";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 175;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "University Score";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 175;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Student Score";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 175;
             // 
             // UCMain
             // 
@@ -414,6 +504,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUniStats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,6 +548,14 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBoxUpdateUserPW;
         private System.Windows.Forms.Button btnUpdateProfileCancel;
+        private System.Windows.Forms.TextBox textBoxUniversitySearcher;
+        private System.Windows.Forms.Button btnUniversitySearcher;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.DataGridView dgvUniStats;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
 
