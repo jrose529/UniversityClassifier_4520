@@ -13,7 +13,7 @@ import pandas as pd
 def graduate_algorithm(GRE,TOEFL,SOP,LOR,CGPA,research,school_info):
 	rankings = []
 	output = []
-	percentAdmin = []
+	output_string = ""
 
 	#load generated model- must be in same folder
 	model = load_model('admission_model.h5',custom_objects={"GlorotUniform": tf.keras.initializers.glorot_uniform})
@@ -36,11 +36,9 @@ def graduate_algorithm(GRE,TOEFL,SOP,LOR,CGPA,research,school_info):
 
 	#generate output array
 	for i in range(schools):
-		output.append([school_info[i][0],admission_chances[i],school_info[i][2]])
-		
+		output_string = output_string + school_info[i][0] + ","
+		output_string = output_string + str(admission_chances[i]) + ","
+		output.append([school_info[i][0],admission_chances[i]])
 	
-	#take top 20
-	for x in range(20):
-		for y in range(3)
-		percentAdmin[x][y] = output[x][y]
-	return percentAdmin
+	#return output
+	return output_string

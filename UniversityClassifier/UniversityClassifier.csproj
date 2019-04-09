@@ -59,6 +59,7 @@
       <DependentUpon>NewUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="pythonScript.cs" />
+    <Compile Include="schoolNamesRanks.cs" />
     <Compile Include="UCMain.cs">
       <SubType>Form</SubType>
     </Compile>

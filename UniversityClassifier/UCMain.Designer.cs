@@ -63,13 +63,14 @@
             this.textBoxUMainGRE = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgvUniStats = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUniversitySearcher = new System.Windows.Forms.Button();
             this.textBoxUniversitySearcher = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -241,6 +242,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnGenerateReport);
             this.tabPage2.Controls.Add(this.radioButtonAINo);
             this.tabPage2.Controls.Add(this.radioButtonAIYes);
             this.tabPage2.Controls.Add(this.btnUMainAISubmit);
@@ -422,6 +424,27 @@
             this.dgvUniStats.Size = new System.Drawing.Size(569, 149);
             this.dgvUniStats.TabIndex = 37;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Category";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 175;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "University Score";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 175;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Student Score";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 175;
+            // 
             // btnUniversitySearcher
             // 
             this.btnUniversitySearcher.Location = new System.Drawing.Point(24, 27);
@@ -458,26 +481,15 @@
             this.tabPage3.Text = "Log Out";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // Column1
+            // btnGenerateReport
             // 
-            this.Column1.HeaderText = "Category";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 175;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "University Score";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 175;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Student Score";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 175;
+            this.btnGenerateReport.Location = new System.Drawing.Point(177, 344);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(111, 33);
+            this.btnGenerateReport.TabIndex = 53;
+            this.btnGenerateReport.Text = "Generate";
+            this.btnGenerateReport.UseVisualStyleBackColor = true;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
             // UCMain
             // 
@@ -551,6 +563,7 @@
         public System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         public System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         public System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btnGenerateReport;
     }
 }
 

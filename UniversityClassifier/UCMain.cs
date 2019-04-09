@@ -20,11 +20,11 @@ namespace UniversityClassifier
             InitializeComponent();
             tabControl1.Hide();
             //dgvUniStats.Rows[0].Cells[0].Value = "GRE Score";
-            dgvUniStats.Rows.Add("GRE Score");
-            dgvUniStats.Rows.Add("TOEFL Score");
-            dgvUniStats.Rows.Add("GPA");
-            dgvUniStats.Rows.Add("Statement of Purpose");
-            dgvUniStats.Rows.Add("Letters of Rec");
+            dgvUniStats.Rows.Add("GRE Score",0,0);
+            dgvUniStats.Rows.Add("TOEFL Score",0,0);
+            dgvUniStats.Rows.Add("GPA",0,0);
+            dgvUniStats.Rows.Add("Statement of Purpose",0,0);
+            dgvUniStats.Rows.Add("Letters of Rec",0,0);
             //dgvUniStats.Hide();
         }
 
@@ -150,8 +150,6 @@ namespace UniversityClassifier
                                         textBoxUMainSoP.Text,
                                         textBoxUMainLoR.Text,
                                         research);
-
-            academicData.generateReport(username_current);
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e)
@@ -190,6 +188,12 @@ namespace UniversityClassifier
         {
             uniQuery newQuery = new uniQuery();
             newQuery.universityQuery(username_current, textBoxUniversitySearcher.Text);
+        }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+            uniQuery academicData_ = new uniQuery();
+            academicData_.generateReport(username_current);
         }
     }
 }

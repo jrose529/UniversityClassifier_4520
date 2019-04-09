@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Data;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace UniversityClassifier
 {
@@ -18,11 +19,7 @@ namespace UniversityClassifier
         public double SoP { get; set; }
         public double LoR { get; set; }
         public double GPA { get; set; }
-        public int Research { get; set; }
-
-        public string schoolName { get; set; }
-        public int avgRanking { get; set; }
-        public int schoolID { get; set; }
+        public double Research { get; set; }
 
         public int getCurrentAcctIndex(string currentAcct)
         {
@@ -145,8 +142,9 @@ namespace UniversityClassifier
                 }
             }
 
-            dgvUniStats.Rows[0].Cells[1].Value = schoolAD[0].GRE;
-            dgvUniStats.Rows[0].Cells[2].Value = userAD[0].GRE;
+
+            dgvUniStats.Rows[0].Cells[1].Value = Convert.ToString(schoolAD[0].GRE);
+            dgvUniStats.Rows[0].Cells[2].Value = Convert.ToString(userAD[0].GRE);
             dgvUniStats.Rows[1].Cells[1].Value = schoolAD[0].TOEFL;
             dgvUniStats.Rows[1].Cells[2].Value = userAD[0].TOEFL;
             dgvUniStats.Rows[2].Cells[1].Value = schoolAD[0].GPA;
@@ -155,6 +153,8 @@ namespace UniversityClassifier
             dgvUniStats.Rows[3].Cells[2].Value = userAD[0].SoP;
             dgvUniStats.Rows[4].Cells[1].Value = schoolAD[0].LoR;
             dgvUniStats.Rows[4].Cells[2].Value = userAD[0].LoR;
+            dgvUniStats.Refresh();
+            
 
             //dgvUniStats.Show();
         }
@@ -163,8 +163,9 @@ namespace UniversityClassifier
         { 
             int studentIndex;
             uniQuery[] userAD = null;
-            string[,] schoolInfo = new string[1277, 3];
-            string[,] report = new string[20, 2];
+            string[,] schoolInfo = new string[1277, 2];
+            //string[,] report = new string[20, 2];
+            string report;
 
             using (SqlConnection connection = new SqlConnection(sqlString))
             {
@@ -183,38 +184,37 @@ namespace UniversityClassifier
                         var listAD = new List<uniQuery>();
                         while (reader.Read())
                         {
-                            listAD.Add(new uniQuery { GRE = reader.GetInt32(0),
-                                                      TOEFL = reader.GetInt32(1),
-                                                      SoP = reader.GetFloat(2),
-                                                      LoR = reader.GetFloat(3),
-                                                      GPA = reader.GetFloat(4),
-                                                      Research = reader.GetInt32(5)});
+                            listAD.Add(new uniQuery { GRE = reader.GetInt64(0),
+                                                      TOEFL = reader.GetInt64(1),
+                                                      SoP = reader.GetDouble(2),
+                                                      LoR = reader.GetDouble(3),
+                                                      GPA = reader.GetDouble(4),
+                                                      Research = reader.GetInt64(5)});
 
                         }
                         userAD = listAD.ToArray();
                     }
                 }
 
-                query = "select school,average,index from university";
+                query = "select school,average from university";
 
                 using (SqlCommand getSchoolInfoCmd = new SqlCommand(query, connection))
                 {
                     using (SqlDataReader reader = getSchoolInfoCmd.ExecuteReader())
                     {
-                        var listSchoolInfo = new List<uniQuery>();
+                        var listSchoolInfo = new List<schoolNamesRanks>();
                         while (reader.Read())
                         {
-                            listSchoolInfo.Add(new uniQuery
-                            { schoolName = reader.GetString(0), avgRanking = reader.GetInt32(1), schoolID = reader.GetInt32(2) });
+                            listSchoolInfo.Add(new schoolNamesRanks
+                            { schoolName = reader.GetString(0), avgRanking = reader.GetInt64(1) });
 
                         }
-
+                        //Memory allocation error?
                         int count = 0;
                         foreach (var listObj in listSchoolInfo)
                         {
                             schoolInfo[count,0] = listObj.schoolName;
                             schoolInfo[count,1] = Convert.ToString(listObj.avgRanking);
-                            schoolInfo[count, 2] = Convert.ToString(listObj.schoolID);
                             count++;  
                         }
 
