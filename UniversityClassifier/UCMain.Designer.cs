@@ -46,6 +46,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxUpdateUserPW = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.radioButtonAINo = new System.Windows.Forms.RadioButton();
             this.radioButtonAIYes = new System.Windows.Forms.RadioButton();
             this.btnUMainAISubmit = new System.Windows.Forms.Button();
@@ -70,7 +71,6 @@
             this.textBoxUniversitySearcher = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -137,10 +137,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(197, 66);
+            this.tabControl1.Location = new System.Drawing.Point(185, 75);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(697, 475);
+            this.tabControl1.Size = new System.Drawing.Size(784, 552);
             this.tabControl1.TabIndex = 7;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
@@ -261,10 +261,20 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(689, 442);
+            this.tabPage2.Size = new System.Drawing.Size(776, 519);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Input Information";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerateReport
+            // 
+            this.btnGenerateReport.Location = new System.Drawing.Point(184, 429);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(111, 33);
+            this.btnGenerateReport.TabIndex = 53;
+            this.btnGenerateReport.Text = "Generate";
+            this.btnGenerateReport.UseVisualStyleBackColor = true;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
             // radioButtonAINo
             // 
@@ -290,7 +300,7 @@
             // 
             // btnUMainAISubmit
             // 
-            this.btnUMainAISubmit.Location = new System.Drawing.Point(35, 361);
+            this.btnUMainAISubmit.Location = new System.Drawing.Point(35, 429);
             this.btnUMainAISubmit.Name = "btnUMainAISubmit";
             this.btnUMainAISubmit.Size = new System.Drawing.Size(111, 33);
             this.btnUMainAISubmit.TabIndex = 50;
@@ -300,7 +310,7 @@
             // 
             // btnUMainAICancel
             // 
-            this.btnUMainAICancel.Location = new System.Drawing.Point(327, 361);
+            this.btnUMainAICancel.Location = new System.Drawing.Point(615, 429);
             this.btnUMainAICancel.Name = "btnUMainAICancel";
             this.btnUMainAICancel.Size = new System.Drawing.Size(111, 33);
             this.btnUMainAICancel.TabIndex = 49;
@@ -406,7 +416,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(689, 442);
+            this.tabPage4.Size = new System.Drawing.Size(776, 519);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "University Stats";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -418,10 +428,10 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvUniStats.Location = new System.Drawing.Point(62, 164);
+            this.dgvUniStats.Location = new System.Drawing.Point(49, 164);
             this.dgvUniStats.Name = "dgvUniStats";
             this.dgvUniStats.RowTemplate.Height = 28;
-            this.dgvUniStats.Size = new System.Drawing.Size(569, 149);
+            this.dgvUniStats.Size = new System.Drawing.Size(670, 178);
             this.dgvUniStats.TabIndex = 37;
             // 
             // Column1
@@ -480,16 +490,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Log Out";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // btnGenerateReport
-            // 
-            this.btnGenerateReport.Location = new System.Drawing.Point(177, 344);
-            this.btnGenerateReport.Name = "btnGenerateReport";
-            this.btnGenerateReport.Size = new System.Drawing.Size(111, 33);
-            this.btnGenerateReport.TabIndex = 53;
-            this.btnGenerateReport.Text = "Generate";
-            this.btnGenerateReport.UseVisualStyleBackColor = true;
-            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
             // UCMain
             // 

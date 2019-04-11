@@ -13,14 +13,28 @@ namespace UniversityClassifier
     {
         public static string sqlString = "server=uniclassifier.cdbytbcvrrjd.us-east-2.rds.amazonaws.com;database=tempdb;UID=masterusername;password=masterpassword";
 
-        public void createAccount(string username, string fname, string lname, string emailaddr, string pw)
+        public int createAccount(string username, string fname, string lname, string emailaddr, string pw)
         {
             using (SqlConnection connection = new SqlConnection(sqlString))
             {
-                string query = "insert into student (username,password,first_name,last_name,email) values (@username,@password,@firstname,@lastname,@emailAddress)";
+                string query = "select username from [student] where username=@userName";
 
-                connection.Open();
+                using (SqlCommand checkUsernameCmd = new SqlCommand(query, connection))
+                {
+                    checkUsernameCmd.Parameters.AddWithValue("@username", username);
 
+                    SqlDataAdapter dA = new SqlDataAdapter(checkUsernameCmd);
+                    DataTable dT = new DataTable();
+                    dA.Fill(dT);
+
+                    if (dT.Rows.Count >= 1)
+                    {
+                        return 0; //This account already exists login
+                    }
+                }
+
+                query = "insert into student (username,password,first_name,last_name,email) values (@username,@password,@firstname,@lastname,@emailAddress)";
+               
                 using (SqlCommand insertCmd = new SqlCommand(query, connection))
                 {
                     insertCmd.Parameters.AddWithValue("@username", username);
@@ -30,6 +44,8 @@ namespace UniversityClassifier
                     insertCmd.Parameters.AddWithValue("@emailAddress", emailaddr);
                     
                     insertCmd.ExecuteNonQuery();
+
+                    return 1; //Account made successfully
                 }
             }
         }

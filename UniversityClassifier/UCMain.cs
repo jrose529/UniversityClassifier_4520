@@ -12,7 +12,7 @@ namespace UniversityClassifier
 {
     public partial class UCMain : Form
     {
-        public string username_current;
+        private string username_current;
 
         public UCMain()
         {
