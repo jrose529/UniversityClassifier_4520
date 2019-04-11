@@ -19,6 +19,8 @@ namespace UniversityClassifier
             {
                 string query = "select username from [student] where username=@userName";
 
+                connection.Open();
+
                 using (SqlCommand checkUsernameCmd = new SqlCommand(query, connection))
                 {
                     checkUsernameCmd.Parameters.AddWithValue("@username", username);
