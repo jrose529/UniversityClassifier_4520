@@ -26,12 +26,15 @@ namespace UniversityClassifier
 ;
 
             engine.ExecuteFile(@"C:\\Users\\jensen\\Documents\\Visual Studio 2015\\Projects\\UniversityClassifier\\UniversityClassifier\\bin\\Debug\\pythonAlgo.txt", scope);
+            //engine.ExecuteFile(@"C:\\Users\\jensen\\Documents\\Visual Studio 2015\\Projects\\UniversityClassifier\\UniversityClassifier\\pythonScriptAlgo.py", scope);
             dynamic testFunction = scope.GetVariable("graduate_algorithm");
             var result = testFunction(userAD[0].GRE, userAD[0].TOEFL, userAD[0].SoP, userAD[0].LoR, userAD[0].GPA, userAD[0].Research, schoolInfo);
 
 
             /*ProcessStartInfo start = new ProcessStartInfo();
-            start.FileName = "C:\\Users\\jensen\\Documents\\Visual Studio 2015\\Projects\\UniversityClassifier\\UniversityClassifier\\bin\\Debug\\GraduateAlgorithmFunction.py";
+            //start.FileName = "C:\\Users\\jensen\\Documents\\Visual Studio 2015\\Projects\\UniversityClassifier\\UniversityClassifier\\bin\\Debug\\GraduateAlgorithmFunction.py";
+            start.FileName = "C:\\Users\\jensen\\Documents\\Visual Studio 2015\\Projects\\UniversityClassifier\\UniversityClassifier\\pythonAlgo.txt";
+
             start.Arguments = string.Format("{0} {1} {2} {3} {4} {5} {6}", userAD[0].GRE, userAD[0].TOEFL, userAD[0].SoP, userAD[0].LoR, userAD[0].GPA, userAD[0].Research, schoolInfo);
             start.UseShellExecute = false;
             start.RedirectStandardOutput = true;

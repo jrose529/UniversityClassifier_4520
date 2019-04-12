@@ -21,6 +21,8 @@ namespace UniversityClassifier
         public double GPA { get; set; }
         public double Research { get; set; }
 
+        public object Value { get; set; }
+
         public int getCurrentAcctIndex(string currentAcct)
         {
             int studentIndex;
@@ -142,7 +144,6 @@ namespace UniversityClassifier
                 }
             }
 
-
             dgvUniStats.Rows[0].Cells[1].Value = Convert.ToString(schoolAD[0].GRE);
             dgvUniStats.Rows[0].Cells[2].Value = Convert.ToString(userAD[0].GRE);
             dgvUniStats.Rows[1].Cells[1].Value = schoolAD[0].TOEFL;
@@ -154,7 +155,6 @@ namespace UniversityClassifier
             dgvUniStats.Rows[4].Cells[1].Value = schoolAD[0].LoR;
             dgvUniStats.Rows[4].Cells[2].Value = userAD[0].LoR;
             dgvUniStats.Refresh();
-            
 
             //dgvUniStats.Show();
         }
@@ -209,7 +209,7 @@ namespace UniversityClassifier
                             { schoolName = reader.GetString(0), avgRanking = reader.GetInt64(1) });
 
                         }
-                        //Memory allocation error?
+                        
                         int count = 0;
                         foreach (var listObj in listSchoolInfo)
                         {
