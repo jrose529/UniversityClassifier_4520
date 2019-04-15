@@ -144,19 +144,37 @@ namespace UniversityClassifier
                 }
             }
 
-            dgvUniStats.Rows[0].Cells[1].Value = Convert.ToString(schoolAD[0].GRE);
-            dgvUniStats.Rows[0].Cells[2].Value = Convert.ToString(userAD[0].GRE);
-            dgvUniStats.Rows[1].Cells[1].Value = schoolAD[0].TOEFL;
-            dgvUniStats.Rows[1].Cells[2].Value = userAD[0].TOEFL;
-            dgvUniStats.Rows[2].Cells[1].Value = schoolAD[0].GPA;
-            dgvUniStats.Rows[2].Cells[2].Value = userAD[0].GPA;
-            dgvUniStats.Rows[3].Cells[1].Value = schoolAD[0].SoP;
-            dgvUniStats.Rows[3].Cells[2].Value = userAD[0].SoP;
-            dgvUniStats.Rows[4].Cells[1].Value = schoolAD[0].LoR;
-            dgvUniStats.Rows[4].Cells[2].Value = userAD[0].LoR;
-            dgvUniStats.Refresh();
+            label12.Hide();
 
-            //dgvUniStats.Show();
+            textBox1.Show();
+            textBox2.Show();
+            textBox3.Show();
+            textBox4.Show();
+            textBox5.Show();
+            textBox6.Show();
+            textBox7.Show();
+            textBox8.Show();
+            textBoxStuGRE.Show();
+            textBoxUniGRE.Show();
+            textBoxStuTOEFL.Show();
+            textBoxUniTOEFL.Show();
+            textBoxStuGPA.Show();
+            textBoxUniGPA.Show();
+            textBoxStuSoP.Show();
+            textBoxUniSoP.Show();
+            textBoxStuLoR.Show();
+            textBoxUniLoR.Show();
+
+            textBoxStuGRE.Text = Convert.ToString(userAD[0].GRE);
+            textBoxUniGRE.Text = Convert.ToString(schoolAD[0].GRE);
+            textBoxStuTOEFL.Text = Convert.ToString(userAD[0].TOEFL);
+            textBoxUniTOEFL.Text = Convert.ToString(schoolAD[0].TOEFL);
+            textBoxStuGPA.Text = Convert.ToString(userAD[0].GPA);
+            textBoxUniGPA.Text = Convert.ToString(schoolAD[0].GPA);
+            textBoxStuSoP.Text = Convert.ToString(userAD[0].SoP);
+            textBoxUniSoP.Text = Convert.ToString(schoolAD[0].SoP);
+            textBoxStuLoR.Text = Convert.ToString(userAD[0].LoR);
+            textBoxUniLoR.Text = Convert.ToString(schoolAD[0].LoR);
         }
 
         public void generateReport(string currentAcct)

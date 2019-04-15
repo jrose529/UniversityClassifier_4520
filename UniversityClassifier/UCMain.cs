@@ -19,13 +19,24 @@ namespace UniversityClassifier
             this.BackgroundImage = Properties.Resources.classifierBackground;
             InitializeComponent();
             tabControl1.Hide();
-            //dgvUniStats.Rows[0].Cells[0].Value = "GRE Score";
-            dgvUniStats.Rows.Add("GRE Score",0,0);
-            dgvUniStats.Rows.Add("TOEFL Score",0,0);
-            dgvUniStats.Rows.Add("GPA",0,0);
-            dgvUniStats.Rows.Add("Statement of Purpose",0,0);
-            dgvUniStats.Rows.Add("Letters of Rec",0,0);
-            //dgvUniStats.Hide();
+            textBox1.Hide();
+            textBox2.Hide();
+            textBox3.Hide();
+            textBox4.Hide();
+            textBox5.Hide();
+            textBox6.Hide();
+            textBox7.Hide();
+            textBox8.Hide();
+            textBoxStuGRE.Hide();
+            textBoxUniGRE.Hide();
+            textBoxStuTOEFL.Hide();
+            textBoxUniTOEFL.Hide();
+            textBoxStuGPA.Hide();
+            textBoxUniGPA.Hide();
+            textBoxStuSoP.Hide();
+            textBoxUniSoP.Hide();
+            textBoxStuLoR.Hide();
+            textBoxUniLoR.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -78,14 +89,25 @@ namespace UniversityClassifier
         {
             if (tabControl1.SelectedTab == tabPage3)
             {
-                for (int a = 1; a< 5; a++)
-                {
-                    for (int b = 0; b < 2; b++)
-                    {
-                        dgvUniStats.Rows[a].Cells[b].Value = "";
-                    }
-                }
-                dgvUniStats.Hide();
+                textBox1.Hide();
+                textBox2.Hide();
+                textBox3.Hide();
+                textBox4.Hide();
+                textBox5.Hide();
+                textBox6.Hide();
+                textBox7.Hide();
+                textBox8.Hide();
+                textBoxStuGRE.Hide();
+                textBoxUniGRE.Hide();
+                textBoxStuTOEFL.Hide();
+                textBoxUniTOEFL.Hide();
+                textBoxStuGPA.Hide();
+                textBoxUniGPA.Hide();
+                textBoxStuSoP.Hide();
+                textBoxUniSoP.Hide();
+                textBoxStuLoR.Hide();
+                textBoxUniLoR.Hide();
+                label12.Show();
                 tabControl1.Hide();
                 mainUNTextbox.Clear();
                 mainPWTextbox.Clear();

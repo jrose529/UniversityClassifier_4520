@@ -9,8 +9,6 @@ using System.Reflection;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 
-//this class reads the python script. It sends in arguments, user data and school info and 
-//should return a 2d array with the school name and percent chance
 namespace UniversityClassifier
 {
     class pythonScript
@@ -49,7 +47,7 @@ namespace UniversityClassifier
                 }
             }*/
 
-            string pythonInterp = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\\python.exe";
+            /*string pythonInterp = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\\python.exe";
             string pythonScript = "pythonScriptAlgo.py";
 
             ProcessStartInfo myProcessStartInfo = new ProcessStartInfo(pythonInterp); 
@@ -73,7 +71,40 @@ namespace UniversityClassifier
             myProcess.WaitForExit();
 
             // close the process 
-            myProcess.Close();
+            myProcess.Close();*/
+
+            string schoolInfo_ = "";
+
+            for (int i = 0; i < 1277; i++)
+            {
+                schoolInfo_ += schoolInfo[i, 0] + "," + schoolInfo[i, 1] + ",";
+            }
+
+            string progToRun = "C:\\Users\\jensen\\Desktop\\RunGraduateAlgorithm.py";
+            char[] splitter = { '\r' };
+
+            Process proc = new Process();
+            proc.StartInfo.FileName = "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python37_64\\python.exe";
+            proc.StartInfo.RedirectStandardOutput = true;
+            proc.StartInfo.UseShellExecute = false;
+
+
+            proc.StartInfo.Arguments = string.Concat(progToRun, " ", userAD[0].GRE.ToString(), " ", userAD[0].TOEFL.ToString(),
+                                            " ", userAD[0].SoP.ToString(), " ", userAD[0].LoR.ToString(), " ",
+                                            userAD[0].GPA.ToString(), " ", userAD[0].Research.ToString(), " ", schoolInfo_);
+            proc.Start();
+
+            StreamReader sReader = proc.StandardOutput;
+            string[] output = sReader.ReadToEnd().Split(splitter);
+
+            foreach (string s in output)
+                Console.WriteLine(s);
+
+
+            string algorithm_output = output[0];
+            algorithm_output = algorithm_output.Split(new string[] { "Results:" }, StringSplitOptions.None)[1];
+
+
 
             string test = "";
             return test;
