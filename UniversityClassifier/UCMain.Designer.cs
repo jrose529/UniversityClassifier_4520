@@ -63,28 +63,10 @@
             this.textBoxUMainLoR = new System.Windows.Forms.TextBox();
             this.textBoxUMainGRE = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnUniversitySearcher = new System.Windows.Forms.Button();
             this.textBoxUniversitySearcher = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBoxStuGRE = new System.Windows.Forms.TextBox();
-            this.textBoxStuTOEFL = new System.Windows.Forms.TextBox();
-            this.textBoxStuGPA = new System.Windows.Forms.TextBox();
-            this.textBoxStuSoP = new System.Windows.Forms.TextBox();
-            this.textBoxStuLoR = new System.Windows.Forms.TextBox();
-            this.textBoxUniGRE = new System.Windows.Forms.TextBox();
-            this.textBoxUniTOEFL = new System.Windows.Forms.TextBox();
-            this.textBoxUniGPA = new System.Windows.Forms.TextBox();
-            this.textBoxUniSoP = new System.Windows.Forms.TextBox();
-            this.textBoxUniLoR = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -422,24 +404,6 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBoxUniLoR);
-            this.tabPage4.Controls.Add(this.textBoxUniSoP);
-            this.tabPage4.Controls.Add(this.textBoxUniGPA);
-            this.tabPage4.Controls.Add(this.textBoxUniTOEFL);
-            this.tabPage4.Controls.Add(this.textBoxUniGRE);
-            this.tabPage4.Controls.Add(this.textBoxStuLoR);
-            this.tabPage4.Controls.Add(this.textBoxStuSoP);
-            this.tabPage4.Controls.Add(this.textBoxStuGPA);
-            this.tabPage4.Controls.Add(this.textBoxStuTOEFL);
-            this.tabPage4.Controls.Add(this.textBoxStuGRE);
-            this.tabPage4.Controls.Add(this.textBox8);
-            this.tabPage4.Controls.Add(this.textBox7);
-            this.tabPage4.Controls.Add(this.textBox6);
-            this.tabPage4.Controls.Add(this.textBox5);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.textBox2);
-            this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Controls.Add(this.btnUniversitySearcher);
             this.tabPage4.Controls.Add(this.textBoxUniversitySearcher);
             this.tabPage4.Controls.Add(this.label12);
@@ -450,15 +414,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "University Stats";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(211, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(111, 26);
-            this.textBox1.TabIndex = 37;
-            this.textBox1.Text = "GRE Score";
             // 
             // btnUniversitySearcher
             // 
@@ -495,149 +450,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Log Out";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(211, 254);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(111, 26);
-            this.textBox2.TabIndex = 38;
-            this.textBox2.Text = "CGPA";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(211, 227);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(111, 26);
-            this.textBox3.TabIndex = 39;
-            this.textBox3.Text = "TOEFL Score";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(211, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(111, 26);
-            this.textBox4.TabIndex = 40;
-            this.textBox4.Text = "Category";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(211, 280);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(111, 26);
-            this.textBox5.TabIndex = 41;
-            this.textBox5.Text = "SoP Score";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(211, 305);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(111, 26);
-            this.textBox6.TabIndex = 42;
-            this.textBox6.Text = "LoR Score";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(321, 174);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(111, 26);
-            this.textBox7.TabIndex = 43;
-            this.textBox7.Text = "Student";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(432, 174);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(111, 26);
-            this.textBox8.TabIndex = 44;
-            this.textBox8.Text = "University";
-            // 
-            // textBoxStuGRE
-            // 
-            this.textBoxStuGRE.Location = new System.Drawing.Point(321, 200);
-            this.textBoxStuGRE.Name = "textBoxStuGRE";
-            this.textBoxStuGRE.ReadOnly = true;
-            this.textBoxStuGRE.Size = new System.Drawing.Size(111, 26);
-            this.textBoxStuGRE.TabIndex = 45;
-            // 
-            // textBoxStuTOEFL
-            // 
-            this.textBoxStuTOEFL.Location = new System.Drawing.Point(321, 227);
-            this.textBoxStuTOEFL.Name = "textBoxStuTOEFL";
-            this.textBoxStuTOEFL.ReadOnly = true;
-            this.textBoxStuTOEFL.Size = new System.Drawing.Size(111, 26);
-            this.textBoxStuTOEFL.TabIndex = 46;
-            // 
-            // textBoxStuGPA
-            // 
-            this.textBoxStuGPA.Location = new System.Drawing.Point(321, 254);
-            this.textBoxStuGPA.Name = "textBoxStuGPA";
-            this.textBoxStuGPA.ReadOnly = true;
-            this.textBoxStuGPA.Size = new System.Drawing.Size(111, 26);
-            this.textBoxStuGPA.TabIndex = 47;
-            // 
-            // textBoxStuSoP
-            // 
-            this.textBoxStuSoP.Location = new System.Drawing.Point(321, 280);
-            this.textBoxStuSoP.Name = "textBoxStuSoP";
-            this.textBoxStuSoP.ReadOnly = true;
-            this.textBoxStuSoP.Size = new System.Drawing.Size(111, 26);
-            this.textBoxStuSoP.TabIndex = 48;
-            // 
-            // textBoxStuLoR
-            // 
-            this.textBoxStuLoR.Location = new System.Drawing.Point(321, 305);
-            this.textBoxStuLoR.Name = "textBoxStuLoR";
-            this.textBoxStuLoR.ReadOnly = true;
-            this.textBoxStuLoR.Size = new System.Drawing.Size(111, 26);
-            this.textBoxStuLoR.TabIndex = 49;
-            // 
-            // textBoxUniGRE
-            // 
-            this.textBoxUniGRE.Location = new System.Drawing.Point(432, 200);
-            this.textBoxUniGRE.Name = "textBoxUniGRE";
-            this.textBoxUniGRE.ReadOnly = true;
-            this.textBoxUniGRE.Size = new System.Drawing.Size(111, 26);
-            this.textBoxUniGRE.TabIndex = 50;
-            // 
-            // textBoxUniTOEFL
-            // 
-            this.textBoxUniTOEFL.Location = new System.Drawing.Point(432, 227);
-            this.textBoxUniTOEFL.Name = "textBoxUniTOEFL";
-            this.textBoxUniTOEFL.ReadOnly = true;
-            this.textBoxUniTOEFL.Size = new System.Drawing.Size(111, 26);
-            this.textBoxUniTOEFL.TabIndex = 51;
-            // 
-            // textBoxUniGPA
-            // 
-            this.textBoxUniGPA.Location = new System.Drawing.Point(432, 254);
-            this.textBoxUniGPA.Name = "textBoxUniGPA";
-            this.textBoxUniGPA.ReadOnly = true;
-            this.textBoxUniGPA.Size = new System.Drawing.Size(111, 26);
-            this.textBoxUniGPA.TabIndex = 52;
-            // 
-            // textBoxUniSoP
-            // 
-            this.textBoxUniSoP.Location = new System.Drawing.Point(432, 280);
-            this.textBoxUniSoP.Name = "textBoxUniSoP";
-            this.textBoxUniSoP.ReadOnly = true;
-            this.textBoxUniSoP.Size = new System.Drawing.Size(111, 26);
-            this.textBoxUniSoP.TabIndex = 53;
-            // 
-            // textBoxUniLoR
-            // 
-            this.textBoxUniLoR.Location = new System.Drawing.Point(432, 305);
-            this.textBoxUniLoR.Name = "textBoxUniLoR";
-            this.textBoxUniLoR.ReadOnly = true;
-            this.textBoxUniLoR.Size = new System.Drawing.Size(111, 26);
-            this.textBoxUniLoR.TabIndex = 54;
             // 
             // UCMain
             // 
@@ -707,24 +519,6 @@
         private System.Windows.Forms.TabPage tabPage4;
         public System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnGenerateReport;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox5;
-        public System.Windows.Forms.TextBox textBox6;
-        public System.Windows.Forms.TextBox textBox7;
-        public System.Windows.Forms.TextBox textBox8;
-        public System.Windows.Forms.TextBox textBoxStuGRE;
-        public System.Windows.Forms.TextBox textBoxUniLoR;
-        public System.Windows.Forms.TextBox textBoxUniSoP;
-        public System.Windows.Forms.TextBox textBoxUniGPA;
-        public System.Windows.Forms.TextBox textBoxUniTOEFL;
-        public System.Windows.Forms.TextBox textBoxUniGRE;
-        public System.Windows.Forms.TextBox textBoxStuLoR;
-        public System.Windows.Forms.TextBox textBoxStuSoP;
-        public System.Windows.Forms.TextBox textBoxStuGPA;
-        public System.Windows.Forms.TextBox textBoxStuTOEFL;
     }
 }
 

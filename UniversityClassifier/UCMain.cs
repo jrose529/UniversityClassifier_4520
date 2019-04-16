@@ -19,24 +19,6 @@ namespace UniversityClassifier
             this.BackgroundImage = Properties.Resources.classifierBackground;
             InitializeComponent();
             tabControl1.Hide();
-            textBox1.Hide();
-            textBox2.Hide();
-            textBox3.Hide();
-            textBox4.Hide();
-            textBox5.Hide();
-            textBox6.Hide();
-            textBox7.Hide();
-            textBox8.Hide();
-            textBoxStuGRE.Hide();
-            textBoxUniGRE.Hide();
-            textBoxStuTOEFL.Hide();
-            textBoxUniTOEFL.Hide();
-            textBoxStuGPA.Hide();
-            textBoxUniGPA.Hide();
-            textBoxStuSoP.Hide();
-            textBoxUniSoP.Hide();
-            textBoxStuLoR.Hide();
-            textBoxUniLoR.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -89,24 +71,6 @@ namespace UniversityClassifier
         {
             if (tabControl1.SelectedTab == tabPage3)
             {
-                textBox1.Hide();
-                textBox2.Hide();
-                textBox3.Hide();
-                textBox4.Hide();
-                textBox5.Hide();
-                textBox6.Hide();
-                textBox7.Hide();
-                textBox8.Hide();
-                textBoxStuGRE.Hide();
-                textBoxUniGRE.Hide();
-                textBoxStuTOEFL.Hide();
-                textBoxUniTOEFL.Hide();
-                textBoxStuGPA.Hide();
-                textBoxUniGPA.Hide();
-                textBoxStuSoP.Hide();
-                textBoxUniSoP.Hide();
-                textBoxStuLoR.Hide();
-                textBoxUniLoR.Hide();
                 label12.Show();
                 tabControl1.Hide();
                 mainUNTextbox.Clear();

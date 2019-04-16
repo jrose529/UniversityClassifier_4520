@@ -21,8 +21,6 @@ namespace UniversityClassifier
         public double GPA { get; set; }
         public double Research { get; set; }
 
-        public object Value { get; set; }
-
         public int getCurrentAcctIndex(string currentAcct)
         {
             int studentIndex;
@@ -144,37 +142,12 @@ namespace UniversityClassifier
                 }
             }
 
-            label12.Hide();
-
-            textBox1.Show();
-            textBox2.Show();
-            textBox3.Show();
-            textBox4.Show();
-            textBox5.Show();
-            textBox6.Show();
-            textBox7.Show();
-            textBox8.Show();
-            textBoxStuGRE.Show();
-            textBoxUniGRE.Show();
-            textBoxStuTOEFL.Show();
-            textBoxUniTOEFL.Show();
-            textBoxStuGPA.Show();
-            textBoxUniGPA.Show();
-            textBoxStuSoP.Show();
-            textBoxUniSoP.Show();
-            textBoxStuLoR.Show();
-            textBoxUniLoR.Show();
-
-            textBoxStuGRE.Text = Convert.ToString(userAD[0].GRE);
-            textBoxUniGRE.Text = Convert.ToString(schoolAD[0].GRE);
-            textBoxStuTOEFL.Text = Convert.ToString(userAD[0].TOEFL);
-            textBoxUniTOEFL.Text = Convert.ToString(schoolAD[0].TOEFL);
-            textBoxStuGPA.Text = Convert.ToString(userAD[0].GPA);
-            textBoxUniGPA.Text = Convert.ToString(schoolAD[0].GPA);
-            textBoxStuSoP.Text = Convert.ToString(userAD[0].SoP);
-            textBoxUniSoP.Text = Convert.ToString(schoolAD[0].SoP);
-            textBoxStuLoR.Text = Convert.ToString(userAD[0].LoR);
-            textBoxUniLoR.Text = Convert.ToString(schoolAD[0].LoR);
+            MessageBox.Show("           Student        University\n"
+                            + "GRE       " + userAD[0].GRE + "               " + schoolAD[0].GRE
+                            + "\nTOEFL    " + userAD[0].TOEFL + "               " + schoolAD[0].TOEFL
+                            + "\nGPA         " + userAD[0].GPA + "                    " + schoolAD[0].GPA
+                            + "\nSoP         " + userAD[0].SoP + "                    " + schoolAD[0].SoP
+                            + "\nLoR         " + userAD[0].LoR + "                    " + schoolAD[0].LoR, "Results");
         }
 
         public void generateReport(string currentAcct)
