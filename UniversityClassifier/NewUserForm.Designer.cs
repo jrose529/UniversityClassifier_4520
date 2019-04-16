@@ -50,7 +50,7 @@
             this.label2.Location = new System.Drawing.Point(44, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 10;
+            this.label2.TabIndex = 12;
             this.label2.Text = "Password";
             // 
             // label1
@@ -59,7 +59,7 @@
             this.label1.Location = new System.Drawing.Point(44, 202);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
-            this.label1.TabIndex = 9;
+            this.label1.TabIndex = 11;
             this.label1.Text = "Username";
             // 
             // textBoxNewUserFName
@@ -67,35 +67,35 @@
             this.textBoxNewUserFName.Location = new System.Drawing.Point(176, 82);
             this.textBoxNewUserFName.Name = "textBoxNewUserFName";
             this.textBoxNewUserFName.Size = new System.Drawing.Size(138, 26);
-            this.textBoxNewUserFName.TabIndex = 11;
+            this.textBoxNewUserFName.TabIndex = 0;
             // 
             // textBoxNewUserLName
             // 
             this.textBoxNewUserLName.Location = new System.Drawing.Point(176, 122);
             this.textBoxNewUserLName.Name = "textBoxNewUserLName";
             this.textBoxNewUserLName.Size = new System.Drawing.Size(138, 26);
-            this.textBoxNewUserLName.TabIndex = 7;
+            this.textBoxNewUserLName.TabIndex = 1;
             // 
             // textBoxNewUserEmail
             // 
             this.textBoxNewUserEmail.Location = new System.Drawing.Point(176, 159);
             this.textBoxNewUserEmail.Name = "textBoxNewUserEmail";
             this.textBoxNewUserEmail.Size = new System.Drawing.Size(138, 26);
-            this.textBoxNewUserEmail.TabIndex = 18;
+            this.textBoxNewUserEmail.TabIndex = 2;
             // 
             // textBoxNewUserUsername
             // 
             this.textBoxNewUserUsername.Location = new System.Drawing.Point(176, 199);
             this.textBoxNewUserUsername.Name = "textBoxNewUserUsername";
             this.textBoxNewUserUsername.Size = new System.Drawing.Size(138, 26);
-            this.textBoxNewUserUsername.TabIndex = 15;
+            this.textBoxNewUserUsername.TabIndex = 3;
             // 
             // textBoxNewUserPW
             // 
             this.textBoxNewUserPW.Location = new System.Drawing.Point(176, 239);
             this.textBoxNewUserPW.Name = "textBoxNewUserPW";
             this.textBoxNewUserPW.Size = new System.Drawing.Size(138, 26);
-            this.textBoxNewUserPW.TabIndex = 8;
+            this.textBoxNewUserPW.TabIndex = 4;
             // 
             // label3
             // 
@@ -103,7 +103,7 @@
             this.label3.Location = new System.Drawing.Point(44, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 20);
-            this.label3.TabIndex = 12;
+            this.label3.TabIndex = 8;
             this.label3.Text = "First Name";
             // 
             // label4
@@ -112,7 +112,7 @@
             this.label4.Location = new System.Drawing.Point(44, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 20);
-            this.label4.TabIndex = 13;
+            this.label4.TabIndex = 9;
             this.label4.Text = "Last Name";
             // 
             // label5
@@ -121,7 +121,7 @@
             this.label5.Location = new System.Drawing.Point(23, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(283, 20);
-            this.label5.TabIndex = 14;
+            this.label5.TabIndex = 7;
             this.label5.Text = "Create Your University Classifier Profile";
             // 
             // btnCreateProfile
@@ -129,7 +129,7 @@
             this.btnCreateProfile.Location = new System.Drawing.Point(48, 341);
             this.btnCreateProfile.Name = "btnCreateProfile";
             this.btnCreateProfile.Size = new System.Drawing.Size(165, 40);
-            this.btnCreateProfile.TabIndex = 16;
+            this.btnCreateProfile.TabIndex = 6;
             this.btnCreateProfile.Text = "Create Profile";
             this.btnCreateProfile.UseVisualStyleBackColor = true;
             this.btnCreateProfile.Click += new System.EventHandler(this.btnCreateProfile_Click);
@@ -140,7 +140,7 @@
             this.label6.Location = new System.Drawing.Point(44, 162);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 20);
-            this.label6.TabIndex = 17;
+            this.label6.TabIndex = 10;
             this.label6.Text = "Email Address";
             // 
             // textBoxNewUserPWVerify
@@ -148,7 +148,7 @@
             this.textBoxNewUserPWVerify.Location = new System.Drawing.Point(176, 279);
             this.textBoxNewUserPWVerify.Name = "textBoxNewUserPWVerify";
             this.textBoxNewUserPWVerify.Size = new System.Drawing.Size(138, 26);
-            this.textBoxNewUserPWVerify.TabIndex = 19;
+            this.textBoxNewUserPWVerify.TabIndex = 5;
             // 
             // label7
             // 
@@ -156,7 +156,7 @@
             this.label7.Location = new System.Drawing.Point(44, 282);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 20);
-            this.label7.TabIndex = 20;
+            this.label7.TabIndex = 13;
             this.label7.Text = "Verify Password";
             // 
             // NewUserForm
@@ -179,7 +179,7 @@
             this.Controls.Add(this.textBoxNewUserPW);
             this.Controls.Add(this.textBoxNewUserLName);
             this.Name = "NewUserForm";
-            this.Text = "NewUserForm";
+            this.Text = "Create New Account";
             this.ResumeLayout(false);
             this.PerformLayout();
 

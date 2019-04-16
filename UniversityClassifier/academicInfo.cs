@@ -16,5 +16,20 @@ namespace UniversityClassifier
         {
             InitializeComponent();
         }
+
+        private void btnAICancel_Click(object sender, EventArgs e)
+        {
+            textBoxAIGpa.Clear();
+            textBoxAIGreScore.Clear();
+            textBoxAIToeflScore.Clear();
+            textBoxAISoPScore.Clear();
+            textBoxAILoRScore.Clear();
+            this.Close();
+        }
+
+        private void btnAISubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
